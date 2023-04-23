@@ -31,7 +31,7 @@ public class Person {
         this.birthYear = birthYear;
     }
     public Person() {}
-    public Person(String firstName, String lastName, double birthYear) {
+    public Person(String firstName, String lastName, int birthYear) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -57,7 +57,10 @@ public class Person {
         System.out.println("Birth year: " + birthYear);
         System.out.println("Age: " + getAge());
     }
-
+    public void changeName(String firstName, String lastName){
+        firstName = lastName;
+        lastName = firstName;
+    }
     public static void main(String[] args) {
 
         Person[] people = new Person[5];
@@ -72,13 +75,8 @@ public class Person {
             Person[] person1 = people;
             person.output();
         }
-
-
     }
-
-
 }
-
 
 
 
