@@ -1,15 +1,18 @@
+package homework.task2;
+
 import java.util.Scanner;
-public class Main {
+public class SumCalculation {
+    public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        int sum = 0;
+        int sum ;
         int loop;
-        Scanner sc = new Scanner(System.in);
+
         do {
+            sum = 0;
             int array[] = new int[2];
             System.out.print("Enter 2 integers numbers: ");
             for (int i = 0; i < 2; i++) {
-                array[i] = sc.nextInt();
-                sum += array[i];
+                sum += sc.nextInt();
         }
         System.out.println("SUM is: \n" + sum);
             System.out.print("Do you want to repeat? For Yes input 1: ");
