@@ -6,9 +6,8 @@ public class Spaces {
         Scanner sc = new Scanner(System.in);
         System.out.println("Input words with many spaces, please:");
         String s = sc.nextLine();
-
         print(s.split("\\s+"));
-
+        sc.close();
     }
     static void print(String[] arr) {
         System.out.println(Arrays.toString(arr));
