@@ -63,13 +63,8 @@ public class Product {
     }
 
     public static void main(String[] args) {
-        Product product1 = new Product("Phone", LocalDate.of(2020, 1, 1), 500.99);
-        Product product2 = new Product("Iron", LocalDate.of(2021, 1, 1), 29.55);
-        Product product3 = new Product("Phone", LocalDate.of(2021, 1, 1), 4300.0);
-        Product product4 = new Product("Phone", LocalDate.of(2019, 1, 1), 7300.0);
-        List<Product> products = Arrays.asList(product1, product2, product3, product4);
-
-        LocalDate currentDate = LocalDate.now();
+        static Optional<String> mostPopularName(Stream< Employee> employees) {
+            return null;     }
 
         List<Product> filteredAndSorted = products.stream()
                 .filter(p -> p.getManufactureCategory().equals("Phone") && p.getPrice() > 3000 && p.getDateOfManufacture().getYear() < currentDate.getYear() - 1)
