@@ -10,9 +10,11 @@ class Hw1 {
         @Override
         public void run() {
 
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 3; i++) {
 
                 try {
+                    public static void main(String[] args) throws InterruptedException {
+                        var t2 = new Thread(new MyRunnable("Hello", 3000));}
                     Thread.sleep(interval);
                 } catch (InterruptedException e) {
                 }
@@ -23,8 +25,7 @@ class Hw1 {
     }
     public static void main(String[] args) throws InterruptedException {
         var t1 = new Thread(new MyRunnable("Hello", 3000));
-        var t2 = new Thread(new MyRunnable("Bye", 2000));
-        var t3 = new Thread(new MyRunnable("Aloha", 1500));
+          var t3 = new Thread(new MyRunnable("Aloha", 1500));
         t1.start();
         t2.start();
         t1.join();
