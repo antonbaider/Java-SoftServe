@@ -5,11 +5,7 @@ public class Puppy {
         Dog puppy = new Dog("Puppy", Breed.LABRADOR, 3);
         Dog puppy2 = new Dog("Puppy", Breed.BULLDOG, 15);
         Dog puppy3 = new Dog("Puppy", Breed.LABRADOR, 2);
-        if (puppy.equals(puppy2) || puppy.equals(puppy3)) {
-            System.out.println(true);
-        } else if (puppy2.equals(puppy) || puppy2.equals(puppy3)) {
-            System.out.println(true);
-        } else if (puppy3.equals(puppy) || puppy3.equals(puppy2)) {
+        if (puppy.equals(puppy2) || puppy.equals(puppy3) || puppy2.equals(puppy3)) {
             System.out.println(true);
         } else {
             System.out.println(false);
