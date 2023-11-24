@@ -1,74 +1,71 @@
+interface Vehicle {
+}
+
 class Passengers {
     int passengers;
+
     Passengers() {
     }
 
-   Passengers(int passengers) {
+    Passengers(int passengers) {
         this.passengers = passengers;
     }
 
-    public int getPassengers(){
-    return 0;
-}
-  void setPassengers(int passengers) {
-
-}
-}
-interface Vehicle {
-}
-class WaterVehicle extends Passengers implements Vehicle{
-    public WaterVehicle() {
+    public int getPassengers() {
+        return 0;
     }
 
-    void isSailing() {
+    void setPassengers(int passengers) {
+
+    }
+}
+
+class WaterVehicle extends Passengers implements Vehicle {
+    public WaterVehicle() {
     }
 
     public WaterVehicle(int passengers) {
         super(passengers);
     }
+
+    void isSailing() {
+    }
 }
-class FlyingVehicle extends Passengers implements Vehicle{
-    public FlyingVehicle() {}
+
+class FlyingVehicle extends Passengers implements Vehicle {
+    public FlyingVehicle() {
+    }
 
     public FlyingVehicle(int passengers) {
         super(passengers);
     }
 
-    void fly(){};
-    void land(){}
+    void fly() {
+    }
+
+    ;
+
+    void land() {
+    }
 }
-class GroundVehicle extends Passengers implements Vehicle{
-    public GroundVehicle(){}
+
+class GroundVehicle extends Passengers implements Vehicle {
+    public GroundVehicle() {
+    }
 
     public GroundVehicle(int passengers) {
         super(passengers);
     }
-    void drive() {}
+
+    void drive() {
+    }
 }
+
 class Liner extends WaterVehicle {
     int floors;
-@Override
-void isSailing() {}
-    public int getFloors() {
-        return floors;
-    }
-
-    @Override
-    public int getPassengers() {
-        return super.getPassengers();
-    }
-
-    @Override
-    void setPassengers(int passengers) {
-        super.setPassengers(passengers);
-    }
 
     public Liner() {
         super();
-    }
-
-    public void setFloors(int floors) {
-        this.floors = floors;
     }
 
     public Liner(int floors) {
@@ -79,10 +76,45 @@ void isSailing() {}
         super(passengers);
         this.floors = floors;
     }
+
+    @Override
+    void isSailing() {
+    }
+
+    public int getFloors() {
+        return floors;
+    }
+
+    public void setFloors(int floors) {
+        this.floors = floors;
+    }
+
+    @Override
+    public int getPassengers() {
+        return super.getPassengers();
+    }
+
+    @Override
+    void setPassengers(int passengers) {
+        super.setPassengers(passengers);
+    }
 }
+
 class Boat extends WaterVehicle {
     int volume;
-Boat() {}
+
+    Boat() {
+    }
+
+    public Boat(int volume) {
+        this.volume = volume;
+    }
+
+    public Boat(int passengers, int volume) {
+        super(passengers);
+        this.volume = volume;
+    }
+
     public int getVolume() {
         return volume;
     }
@@ -91,10 +123,6 @@ Boat() {}
         this.volume = volume;
     }
 
-    public Boat(int volume) {
-        this.volume = volume;
-    }
-
     @Override
     public int getPassengers() {
         return super.getPassengers();
@@ -105,48 +133,28 @@ Boat() {}
         super.setPassengers(passengers);
     }
 
-    public Boat(int passengers, int volume) {
-        super(passengers);
-        this.volume = volume;
-    }
     @Override
-    void isSailing() {}
+    void isSailing() {
+    }
 }
-class Plane extends FlyingVehicle{
+
+class Plane extends FlyingVehicle {
     int maxDistance;
-Plane () {}
-    public int getMaxDistance() {
-        return maxDistance;
-    }
 
-    @Override
-    public int getPassengers() {
-        return super.getPassengers();
-    }
-
-    @Override
-    void setPassengers(int passengers) {
-        super.setPassengers(passengers);
+    Plane() {
     }
 
     public Plane(int passengers) {
         super(passengers);
     }
 
+    public int getMaxDistance() {
+        return maxDistance;
+    }
+
     public void setMaxDistance(int maxDistance) {
         this.maxDistance = maxDistance;
     }
-    @Override
-    void fly(){}
-    @Override
-    void land(){};
-}
-class Helicopter extends FlyingVehicle{
-    int weight;
-    int maxHeight;
-    Helicopter(){}
-    @Override
-    void fly(){}
 
     @Override
     public int getPassengers() {
@@ -156,6 +164,24 @@ class Helicopter extends FlyingVehicle{
     @Override
     void setPassengers(int passengers) {
         super.setPassengers(passengers);
+    }
+
+    @Override
+    void fly() {
+    }
+
+    @Override
+    void land() {
+    }
+
+    ;
+}
+
+class Helicopter extends FlyingVehicle {
+    int weight;
+    int maxHeight;
+
+    Helicopter() {
     }
 
     public Helicopter(int passengers) {
@@ -163,11 +189,36 @@ class Helicopter extends FlyingVehicle{
     }
 
     @Override
-    void land(){};
+    void fly() {
+    }
+
+    @Override
+    public int getPassengers() {
+        return super.getPassengers();
+    }
+
+    @Override
+    void setPassengers(int passengers) {
+        super.setPassengers(passengers);
+    }
+
+    @Override
+    void land() {
+    }
+
+    ;
 }
+
 class Bus extends GroundVehicle {
     String route;
-Bus() {}
+
+    Bus() {
+    }
+
+    public Bus(int passengers) {
+        super(passengers);
+    }
+
     public String getRoute() {
         return route;
     }
@@ -176,10 +227,6 @@ Bus() {}
         this.route = route;
     }
 
-    public Bus(int passengers) {
-        super(passengers);
-    }
-
     @Override
     public int getPassengers() {
         return super.getPassengers();
@@ -191,13 +238,24 @@ Bus() {}
     }
 
     @Override
-    void drive() {}
+    void drive() {
+    }
 }
+
 class Motorcycle extends GroundVehicle {
     int maxSpeed;
-Motorcycle() {}
+
+    Motorcycle() {
+    }
+
+    public Motorcycle(int passengers) {
+        super(passengers);
+    }
+
     @Override
-    void drive(){}
+    void drive() {
+    }
+
     public int getMaxSpeed() {
         return maxSpeed;
     }
@@ -215,14 +273,17 @@ Motorcycle() {}
     void setPassengers(int passengers) {
         super.setPassengers(passengers);
     }
-
-    public Motorcycle(int passengers) {
-        super(passengers);
-    }
 }
+
 class Car extends GroundVehicle {
     String model;
-    Car (){}
+
+    Car() {
+    }
+
+    public Car(int passengers) {
+        super(passengers);
+    }
 
     public String getModel() {
         return model;
@@ -242,10 +303,7 @@ class Car extends GroundVehicle {
         super.setPassengers(passengers);
     }
 
-    public Car(int passengers) {
-        super(passengers);
-    }
-
     @Override
-    void drive(){}
+    void drive() {
+    }
 }
